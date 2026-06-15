@@ -1,0 +1,49 @@
+//             ----- Introduction -----
+// This is an example Composite Mesh Object (CMO).
+
+// Any text placed after a "//" is a comment that will be ignored when loading this file.
+// Whitespace in the definition of a CMO will be ignored when loading this file.
+
+// A CMO is a combination of simplistic Meshes (3D-models) that come together (in a way you dictate) 
+// to create a seemingly complex Mesh, while not actually using a new Mesh.
+
+//             ----- Understanding the 3D Positioning -----
+// You can think of each CMO being an individual 3D-space in which the Meshes exist, 
+// in which each mesh moves relative to its CMO.
+// The CMOs are part of the Scene, which acts as a parent 3D-space for the CMOs, in which each CMO
+// moves relative to the Scene.
+// This allows for the movement of these collections of individual Meshes as one cohesive Mesh within the scene.
+
+//             ----- Defining a CMO -----
+// The CMO gets its name from the filename, meaning this CMO is called "example".
+
+// You "compose" a CMO with Mesh Objects (the 3D-models or Meshes I mentioned before).
+
+// Each Mesh Object is enclosed in brackets
+{
+    // Each attribute must be in the formats laid out below, 
+    // each ended with a comma if any attribute comes after.
+
+    // Here you choose the underlying basic Mesh that will be used.
+    mesh: (cone),   // Reference "mesh_list.txt" to see avaliable meshes
+
+    // Here you will set the position, scale, and rotation of the Mesh Object, in relation to the CMO.
+    //        (  X,   Y,   Z) | Using a max of 4 decimal spaces (ex. 0.0000)
+    position: (0.0, 0.9, 0.0),
+    scale:    (0.5, 2.0, 0.5),
+    rotation: (0.0, 0.0, 0.0),
+
+    // Here you will set the texture and material applied to the Mesh Object
+    texture: (flat), // This will look for a .JPG file in the textures folder with the same name
+    material: (example), // This will look for a .MAT file in the materials folder with the same name
+}
+
+{
+    // At a minimum you must assign a mesh
+
+    mesh: (sphere)
+
+    // The rest will get assigned reasonable defaults (zero'd positioning, flat white material)
+}
+
+// If there is any issues with the formatting of these files (.CMO), the program will catch it, notify you via the terminal.

@@ -1,0 +1,39 @@
+//             ----- Introduction -----
+// This is an example Light.
+
+// Any text placed after a "//" is a comment that will be ignored when loading this file.
+// Whitespace in the definition of a Light will be ignored when loading this file.
+
+//             ----- Understanding a Light -----
+// A Light is a collection of data that comes together to represent a
+// source of light within a Scene. The Light illuminates the Meshes within
+// the Scene based on how you define it. It can illuminate with different colors
+// and intensities.
+
+// It is out of the scope of this example to explain how it all interacts, but
+// there are plenty of resources online to learn from. (Search: 3D Lighting)
+// Though, I'll admit the lighting info you'll find online is much more complex
+// than what's being used here.
+
+//             ----- Defining a Light -----
+// Only one Light may be defined per file.
+// The Light gets its name from the filename, meaning this Light is called "example".
+
+// The Light is enclosed in brackets
+{
+    // Each attribute must be in the formats laid out below, 
+    // each ended with a comma if any attribute comes after.
+
+    // Here we define the (Red, Green, Blue) values of the ambient, diffuse, and specular colors.
+    //        (  R,      G,   B) | Max: 1.0, Min: 0.0 | Using a max of 4 decimal spaces (ex. 0.0000)
+    ambient:  (0.8, 0.7929, 0.0),
+    diffuse:  (1.0,  0.929, 0.0),
+    specular: (0.8,    0.8, 0.8),
+
+    // Here we define the values of the ambient strength, and shininess.
+    // Using a max of 4 decimal spaces (ex. 0.0000)
+    focal_strength: (32.0),
+    specular_intensity: (1.0)
+}
+// If there are any errors with the formatting, the program will catch it, alert you via the terminal,
+// and not use the light.

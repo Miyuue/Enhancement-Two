@@ -1,0 +1,55 @@
+//             ----- Introduction -----
+// This is an example Scene.
+
+// Any text placed after a "//" is a comment that will be ignored when loading this file.
+// Whitespace in the definition of a Scene will be ignored when loading this file.
+
+//             ----- Understanding the Scene -----
+// A Scene is a 3D-space in which Composite Mesh Objects (CMOs) and Lights exist and are used.
+// You define your CMOs and Lights in seperate files, then simply declare which lights and
+// CMOs you want in the scene and their positions, as shown below.
+
+//             ----- Defining the Scene -----
+// The Scene gets its name from the filename, meaning this Scene is called "example".
+
+
+// Each attribute must be in the formats laid out below, 
+// each ended with a comma if any attribute comes after.
+// The exception being the ending brackets not needing a comma after.
+
+// Each light is enclosed in brackets
+// 4 lights max, any additional will be ignored.
+{
+    // Here you will enter the name of the light, in this case: "example".
+    light: (example),
+
+    // Here you will enter the position of the chosen light.
+    //        (  X,   Y,   Z) | Using a max of 4 decimal spaces (ex. 0.0000)
+    position: (0.0, 2.0, 4.0)
+}
+{
+    light: (example),
+    position: (-4.0, 2.0, 4.0)
+}
+{
+    light: (example),
+    position: (4.0, 2.0, 4.0)
+}
+{
+    // At a minimum you must assign a light.
+    // The position will be zero'd out by default if omitted.
+    light: (example),
+    position: (0.0, 6.0, -6.0)
+}
+
+// Each CMO is enclosed in brackets
+{
+    // Here you will enter the name of the CMO, in this case: "example".
+    CMO: (example),
+
+    // Here you will enter the position of the chosen CMO.
+    //        (  X,   Y,   Z) | Using a max of 4 decimal spaces (ex. 0.0000)
+    position: (0.0, 0.0, 0.0)
+}
+
+// As shown above, you can reuse the same lights and CMOs repeatedly. Each one will considered seperate.

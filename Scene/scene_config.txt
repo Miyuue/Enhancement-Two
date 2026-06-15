@@ -1,0 +1,4 @@
+example
+
+Only the first line is read, and must be the name of the scene you want loaded.
+In this case we want to load example.scene, so we put "example".

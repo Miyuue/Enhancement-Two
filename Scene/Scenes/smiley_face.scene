@@ -1,0 +1,32 @@
+// ----- Lights -----
+{
+    light: (example),
+    position: (4.0, 4.0, 4.0)
+}
+{
+    light: (example),
+    position: (-4.0, 4.0, 4.0)
+}
+{
+    light: (example),
+    position: (-4.0, -4.0, 4.0)
+}
+{
+    light: (example),
+    position: (4.0, -4.0, 4.0)
+}
+
+// ----- CMOS -----
+{
+    CMO: (eyeball),
+    position: (-4.0, 0.0, 0.0)
+}
+{
+    CMO: (eyeball),
+    position: (4.0, 0.0, 0.0)
+}
+
+{
+    CMO: (smile),
+    position: (0.0, -8.0, 0.0)
+}

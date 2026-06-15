@@ -1,0 +1,38 @@
+//             ----- Introduction -----
+// This is an example Material.
+
+// Any text placed after a "//" is a comment that will be ignored when loading this file.
+// Whitespace in the definition of a Material will be ignored when loading this file.
+
+//             ----- Understanding a Material -----
+// A Material is collection of data that comes together to represent
+// how a Mesh (3D Model) interacts with the lighting in the Scene.
+// Meaning how you define a Material will change the colors of a Mesh,
+// how shiny or dull looking a Mesh is, and how different lights "mix" on a Mesh.
+
+// It is out of the scope of this example to explain how it all interacts, but
+// there are plenty of resources online to learn from. (Search: Shader Materials)
+
+//             ----- Defining a Material -----
+// Only one Material may be defined per file.
+// The Material gets its name from the filename, meaning this Material is called "example".
+
+// The Material is enclosed in brackets
+{
+    // Each attribute must be in the formats laid out below, 
+    // each ended with a comma if any attribute comes after.
+
+    // Here we define the (Red, Green, Blue) values of the ambient, diffuse, and specular colors.
+    //        (   R,    G,    B) | Max: 1.0, Min: 0.0 | Using a max of 4 decimal spaces (ex. 0.0000)
+    ambient:  (0.8, 0.0, 1.0),
+    diffuse:  (0.4, 0.0, 0.6),
+    specular: ( 0.1,  0.1,  0.1),
+
+    // Here we define the values of the ambient strength, and shininess.
+    // Using a max of 4 decimal spaces (ex. 0.0000)
+    ambient_strength: (1.0),
+    shininess: (0.1)
+}
+
+// If there are any errors with the formatting, the program will catch it, alert you via the terminal,
+// then apply a hot-pink material to catch your attention.
